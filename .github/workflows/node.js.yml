@@ -17,6 +17,9 @@ jobs:
         with:
           node-version: 18
 
+      - name: create .env
+        run: ${{ secrets.ENV }} > .env
+
       - name: run npm install
         run: npm install
 
