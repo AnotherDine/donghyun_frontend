@@ -5,7 +5,31 @@
         </ul>
     </div>
 </template>
+<script>
+export default {
+    data() {
+        return {
+            dataList: [],
+        };
+    },
 
+    mounted() {
+        this.fetchData();
+    },
+
+    methods: {
+        async fetchData() {
+            try {
+                const response = await this.$http.get('/api/data');
+                this.dataList = response.data;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        },
+    },
+}
+</script>
+<!--
 <script>
 import axios from 'axios';
 export default {
@@ -31,3 +55,4 @@ export default {
     },
 }
 </script>
+-->
