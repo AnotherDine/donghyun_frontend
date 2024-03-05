@@ -2,10 +2,10 @@ name: Front Deployment
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 env:
   PROJECT_NAME: donghyun_frontend
-  BUCKET_NAME: donghweb
+  BUCKET_NAME: kdh.anotherdine.shop
 
 jobs:
   deploy:
